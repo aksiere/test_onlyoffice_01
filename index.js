@@ -16,4 +16,4 @@ function main(floors) {
 	console.log(SPACE.repeat(mw/2-2) + BASE.repeat(5) + SPACE.repeat(mw/2-2))
 }
 
-main(2)
+main(5)
