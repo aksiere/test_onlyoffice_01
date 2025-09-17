@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
 import { main as generateTree } from '../index.js'
 
-test('Для 5 "этажей" должно быть 8 строк в файле', async () => {
+test('Для 5 "этажей" должно быть 8 непустых строк в файле', async () => {
 	const file = await generateTree(5, 't1.txt')
 	expect(file.split('\n').filter(row => row !== '').length).toBe(8)
 })
