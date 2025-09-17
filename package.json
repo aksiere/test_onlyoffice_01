@@ -1,0 +1,24 @@
+{
+	"name": "test_onlyoffice_01",
+	"version": "1.0.0",
+	"private": true,
+	"description": "",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aksiere/test_onlyoffice_01.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"test": "npx vitest"
+	},
+	"dependencies": {
+		"vitest": "^3.2.4"
+	},
+	"module": "index.js"
+}
