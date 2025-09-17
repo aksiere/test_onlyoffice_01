@@ -2,6 +2,7 @@ import { appendFileSync, readFileSync, writeFileSync } from 'fs'
 
 const FILE = 'tree.txt'
 
+
 const SPACE = ' '
 const STAR = 'W'
 const GIFT = '@'
