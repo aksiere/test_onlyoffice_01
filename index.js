@@ -40,4 +40,4 @@ export async function main(floors, file = FILE) {
 	return readFileSync(file, 'utf8')
 }
 
-await main(5, 'result.txt')
+await main(5)
