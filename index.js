@@ -10,6 +10,7 @@ const BASE = 'T'
 
 function addFloor(str = '', file = FILE) {
 	appendFileSync(file, str + '\n')
+	
 }
 
 export async function main(floors, file = FILE) {
