@@ -15,8 +15,8 @@ function addFloor(str = '', file = FILE) {
 export async function main(floors, file = FILE) {
 	writeFileSync(file, '')
 
-	if (floors <= 1) throw new Error('Это уже не ёлка мне кажется.')
-	if (floors > 50) throw new Error('Не надо...')
+	if (floors <= 1) throw new Error('NOT_MANY_FLOORS')
+	if (floors > 50) throw new Error('TOO_MANY_FLOORS')
 
 	const mw = (floors - 1) * 2 * 2 + 1 + 2
 	const bw = floors < 3 ? 1 : floors < 4 ? 3 : 5
