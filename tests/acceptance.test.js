@@ -39,14 +39,16 @@ test('Для 3 "этажей" ствол должен быть шириной в
 })
 
 test('Для <2 "этажей" должна выводиться ошибка', async () => {
-	await expect(() => generateTree(-1, 't5.txt')).rejects.toThrowError('NOT_MANY_FLOORS')
-	await expect(() => generateTree(0, 't5.txt')).rejects.toThrowError('NOT_MANY_FLOORS')
-	await expect(() => generateTree(1, 't5.txt')).rejects.toThrowError('NOT_MANY_FLOORS')
+	const err = 'NOT_MANY_FLOORS'
+	await expect(() => generateTree(-1, 't5.txt')).rejects.toThrowError(err)
+	await expect(() => generateTree(0, 't5.txt')).rejects.toThrowError(err)
+	await expect(() => generateTree(1, 't5.txt')).rejects.toThrowError(err)
 })
 
 test('Для >51 "этажа" должна выводиться ошибка', async () => {
-	await expect(() => generateTree(51, 't6.txt')).rejects.toThrowError('TOO_MANY_FLOORS')
-	await expect(() => generateTree(100, 't6.txt')).rejects.toThrowError('TOO_MANY_FLOORS')
-	await expect(() => generateTree(1000000000000, 't6.txt')).rejects.toThrowError('TOO_MANY_FLOORS')
+	const err = 'TOO_MANY_FLOORS'
+	await expect(() => generateTree(51, 't6.txt')).rejects.toThrowError(err)
+	await expect(() => generateTree(100, 't6.txt')).rejects.toThrowError(err)
+	await expect(() => generateTree(1000000000000, 't6.txt')).rejects.toThrowError(err)
 })
 
