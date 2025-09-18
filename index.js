@@ -10,13 +10,12 @@ const BASE = 'T'
 
 function addFloor(str = '', file = FILE) {
 	appendFileSync(file, str + '\n')
-	
 }
 
 export async function main(floors, file = FILE) {
 	writeFileSync(file, '')
 
-	if (floors <= 1) throw new Error('NOT_MANY_FLOORS')
+	if (floors <= 10) throw new Error('NOT_MANY_FLOORS')
 	if (floors > 50) throw new Error('TOO_MANY_FLOORS')
 
 	const mw = (floors - 1) * 2 * 2 + 1 + 2
